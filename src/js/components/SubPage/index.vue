@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{h1_text}}</h1>
+    <h1>{{h1Text}}</h1>
     <router-link to="/html/sub/children1" v-slot="{navigate}">
       <button v-on:click="navigate">to SubChildren1Page /html/sub/children1</button>
     </router-link>
@@ -14,11 +14,11 @@
 <script>
   export default {
     created() {
-      console.log("created " + this.h1_text);
+      console.log("created " + this.h1Text);
     },
     data() {
       return {
-        h1_text: "Vue3.js KichenSink Sub Page",
+        h1Text: "Vue3.js KichenSink Sub Page",
       }
     }
   };

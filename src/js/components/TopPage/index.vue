@@ -1,9 +1,9 @@
 <template>
   <div>
-      <h1>{{h1_text}}</h1>
-      <input type="text" v-focus class="search-word" v-model="search_word" placeholder="検索ワードを入力してください。">
-      <button v-on:click="resetSearchWord()" class="btn" v-bind:class="reset_btn_class" v-bind:disabled="!is_reset_btn_active">reset</button>
-      <fruit-item v-for="(fruit, index) in filter_fruit_list" v-bind:fruit="fruit" :key="index">{{ fruit }}</fruit-item>
+      <h1>{{h1Text}}</h1>
+      <input type="text" v-focus class="search-word" v-model="searchWord" placeholder="検索ワードを入力してください。">
+      <button v-on:click="resetSearchWord()" class="btn" v-bind:class="resetBtnClass" v-bind:disabled="!isResetBtnActive">reset</button>
+      <fruit-item v-for="(fruit, index) in filterFruitList" v-bind:fruit="fruit" :key="index">{{ fruit }}</fruit-item>
   </div>
 </template>
 
@@ -12,13 +12,13 @@
 
   export default {
     created() {
-      console.log("created " + this.h1_text);
+      console.log("created " + this.h1Text);
     },
     data() {
       return {
-        h1_text: "Vue3.js KichenSink Main Page",
-        search_word: "",
-        fruit_list: [
+        h1Text: "Vue3.js KichenSink Main Page",
+        searchWord: "",
+        fruitList: [
           {
             ja_name: "リンゴ",
             en_name: "apple",
@@ -48,33 +48,33 @@
       }
     },
     computed: {
-      filter_fruit_list: function () {
+      filterFruitList: function () {
         var isSearchResult = this.isSearchResult;
         // 検索ワードでフィルターをかける
-        return this.fruit_list.filter(function (fruit) {
+        return this.fruitList.filter(function (fruit) {
           return isSearchResult(fruit);
         })
       },
-      is_reset_btn_active() {
-        return this.search_word != ""
+      isResetBtnActive() {
+        return this.searchWord != ""
       }
       ,
-      reset_btn_class() {
+      resetBtnClass() {
         return {
-          active: this.is_reset_btn_active
+          active: this.isResetBtnActive
         }
       }
     },
     methods: {
       isSearchResult(fruit) {
         var isView = false;
-        if ( fruit.description.indexOf(this.search_word) != -1) {
+        if ( fruit.description.indexOf(this.searchWord) != -1) {
           isView = true;
         }
         return isView;
       },
       resetSearchWord() {
-        this.search_word = "";
+        this.searchWord = "";
       }
     },
     // ローカルコンポーネント登録

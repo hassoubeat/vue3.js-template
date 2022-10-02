@@ -1,5 +1,5 @@
 <template>
-    <h1>{{h1_text}}</h1>
+    <h1>{{h1Text}}</h1>
     <user-item v-for="(user, index) in users" v-bind:user="user" :key="index"></user-item>
 </template>
  
@@ -9,11 +9,11 @@ import UserItem from './UserItem/index.vue';
  
 export default {
   created() {
-    console.log("created " + this.h1_text);
+    console.log("created " + this.h1Text);
   },
   data(){
     return {
-      h1_text: "Vue3.js KichenSink User List Page",
+      h1Text: "Vue3.js KichenSink User List Page",
       users: [
         {
           id: 1,
