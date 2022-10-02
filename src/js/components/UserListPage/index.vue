@@ -5,7 +5,7 @@
  
 <script>
 
-import UserItem from './userItem.vue';
+import UserItem from './UserItem/index.vue';
  
 export default {
   created() {

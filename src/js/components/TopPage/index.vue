@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import FruitItem from './fruitItem.vue';
+  import FruitItem from './FruitItem/index.vue';
 
   export default {
     created: function () {
