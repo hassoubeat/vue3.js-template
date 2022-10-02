@@ -14,7 +14,7 @@
     data() {
       return {
         h1Text: "Vue3.js KichenSink Sub Children2 Page",
-        message: `this page url is ${ROUTING_PATH.SUB2}( with rooting guard )`
+        message: `this page url is ${ROUTING_PATH.SUB_CHILD2}( with rooting guard )`
       }
     }
   };

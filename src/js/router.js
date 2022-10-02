@@ -24,12 +24,12 @@ const router = createRouter({
       children: [
         {
           // /html/sub/children1
-          path: ROUTING_PATH.SUB1,
+          path: ROUTING_PATH.SUB_CHILD1,
           component: SubChildPage1
         },
         {
           // /html/sub/children2
-          path: ROUTING_PATH.SUB2,
+          path: ROUTING_PATH.SUB_CHILD2,
           component: SubChildPage2,
           // メタフィールド(ログインが必要であることを表示)
           meta: { requiresAuth: true }

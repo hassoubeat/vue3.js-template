@@ -1,11 +1,11 @@
 <template>
   <div>
     <h1>{{h1Text}}</h1>
-    <router-link :to="ROUTING_PATH.SUB1" v-slot="{navigate}">
-      <button v-on:click="navigate">to SubChildren1Page {{ ROUTING_PATH.SUB1 }}</button>
+    <router-link :to="ROUTING_PATH.SUB_CHILD1" v-slot="{navigate}">
+      <button v-on:click="navigate">to SubChildren1Page {{ ROUTING_PATH.SUB_CHILD1 }}</button>
     </router-link>
-    <router-link :to="ROUTING_PATH.SUB2" v-slot="{navigate}">
-      <button v-on:click="navigate">to SubChildren2Page /{{ ROUTING_PATH.SUB2 }}(require login)</button>
+    <router-link :to="ROUTING_PATH.SUB_CHILD2" v-slot="{navigate}">
+      <button v-on:click="navigate">to SubChildren2Page {{ ROUTING_PATH.SUB_CHILD2 }}(require login)</button>
     </router-link>
     <router-view></router-view>
   </div>
