@@ -1,12 +1,12 @@
 <template>
-  <router-link to="/html" v-slot="{navigate}">
-    <button v-on:click="navigate">to MainPage /html</button>
+  <router-link :to="ROUTING_PATH.TOP" v-slot="{navigate}">
+    <button v-on:click="navigate">to MainPage {{ ROUTING_PATH.TOP }}</button>
   </router-link>
-  <router-link to="/html/sub" v-slot="{navigate}">
-    <button v-on:click="navigate">to SubPage /html/sub</button>
+  <router-link :to="ROUTING_PATH.SUB" v-slot="{navigate}">
+    <button v-on:click="navigate">to SubPage {{ ROUTING_PATH.SUB }}</button>
   </router-link>
-  <router-link to="/html/users" v-slot="{navigate}">
-    <button v-on:click="navigate">to UserListPage /html/users</button>
+  <router-link :to="ROUTING_PATH.USER_LIST" v-slot="{navigate}">
+    <button v-on:click="navigate">to UserListPage {{ ROUTING_PATH.USER_LIST }}</button>
   </router-link>
   <button v-if="!isLogin" v-on:click="login">login</button>
   <button v-if="isLogin" v-on:click="logout">logout</button>
@@ -19,6 +19,7 @@
 import { computed } from "vue";
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router';
+import { ROUTING_PATH } from "../const";
  
 export default {
   setup() {
@@ -49,7 +50,8 @@ export default {
       isLogin,
       login,
       logout,
-      goBack
+      goBack,
+      ROUTING_PATH
     }
   }
 }

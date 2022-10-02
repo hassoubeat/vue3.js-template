@@ -7,12 +7,14 @@
 </template>
  
 <script>
+
+import { ROUTING_PATH } from "../../../const";
  
 export default {
   props: ["user"],
   computed: {
-    href: function() {
-      return "/html/users/" + this.user.id;
+    href() {
+      return ROUTING_PATH.USER_DETAIL_OUT_ID + this.user.id;
     }
   },
 }

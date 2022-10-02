@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import store from './store';
+import { ROUTING_PATH } from './const';
 
 import Top from "./components/TopPage/index.vue";
 import SubView from "./components/SubPage/index.vue";
@@ -12,23 +13,23 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/html',
+      path: ROUTING_PATH.TOP,
       name: 'main',
       component: Top
     },
     {
-      path: '/html/sub',
+      path: ROUTING_PATH.SUB,
       name: 'sub',
       component: SubView,
       children: [
         {
           // /html/sub/children1
-          path: 'children1',
+          path: ROUTING_PATH.SUB1,
           component: SubChildrenView1
         },
         {
           // /html/sub/children2
-          path: 'children2',
+          path: ROUTING_PATH.SUB2,
           component: SubChildrenView2,
           // メタフィールド(ログインが必要であることを表示)
           meta: { requiresAuth: true }
@@ -36,12 +37,12 @@ const router = createRouter({
       ]
     },
     {
-      path: '/html/users/',
+      path: ROUTING_PATH.USER_LIST,
       name: 'user_list',
       component: UserListPage
     },
     {
-      path: '/html/users/:id',
+      path: ROUTING_PATH.USER_DETAIL_IN_ID,
       name: 'user_detail',
       component: UserDetailPage,
       // URLからコンポーネント側に引数を渡すことを明示(idに渡される)
@@ -60,7 +61,7 @@ router.beforeEach((to, from, next) => {
     } else {
       console.log("Not Login");
       next({
-        path: '/html',
+        path: ROUTING_PATH.TOP,
         query: { redirect: to.fullPath }
       })
     }
