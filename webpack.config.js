@@ -51,15 +51,12 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
+    extensions: [ '.tsx', '.ts', '.js', '.vue' ]
   },
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery',
-      Vue: ['vue/dist/vue.esm.js', 'default']
+      jQuery: 'jquery'
     }),
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
