@@ -47,7 +47,7 @@ const router = createRouter({
   ]
 })
 
-// ルーティング時のbefore処理
+// ルーティング時のbefore処理
 router.beforeEach((to, from, next) => {
   console.log("before global routing from:" + from.path + " ⇒ to:" + to.path);
   if (to.matched.some(record => record.meta.requiresAuth)) {
@@ -66,7 +66,7 @@ router.beforeEach((to, from, next) => {
   }
 })
 
-// ルーティング時のafter処理
+// ルーティング時のafter処理
 router.afterEach((to, from) => {
   console.log("after global routing");
 })
