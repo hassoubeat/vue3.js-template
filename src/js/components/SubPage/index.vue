@@ -5,7 +5,7 @@
       <button v-on:click="navigate">to SubChildren1Page /html/sub/children1</button>
     </router-link>
     <router-link to="/html/sub/children2" v-slot="{navigate}">
-      <button v-on:click="navigate">to SubChildren2Page /html/sub/children2</button>
+      <button v-on:click="navigate">to SubChildren2Page /html/sub/children2(require login)</button>
     </router-link>
     <router-view></router-view>
   </div>
@@ -18,7 +18,7 @@
     },
     data: function() {
       return {
-        h1_text: "Vue.js KichenSink Sub Page",
+        h1_text: "Vue3.js KichenSink Sub Page",
       }
     }
   };

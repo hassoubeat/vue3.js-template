@@ -11,7 +11,7 @@
     },
     data: function() {
       return {
-        h1_text: "Vue.js KichenSink Sub Children1 Page",
+        h1_text: "Vue3.js KichenSink Sub Children1 Page",
         message: "this page url is /html/sub/children1"
       }
     }

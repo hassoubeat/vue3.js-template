@@ -13,7 +13,7 @@ export default {
   },
   data(){
     return {
-      h1_text: "Vue.js KichenSink User List Page",
+      h1_text: "Vue3.js KichenSink User List Page",
       users: [
         {
           id: 1,

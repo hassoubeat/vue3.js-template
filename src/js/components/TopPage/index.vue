@@ -16,7 +16,7 @@
     },
     data: function(){
       return {
-        h1_text: "Vue.js KichenSink Main Page",
+        h1_text: "Vue3.js KichenSink Main Page",
         search_word: "",
         fruit_list: [
           {

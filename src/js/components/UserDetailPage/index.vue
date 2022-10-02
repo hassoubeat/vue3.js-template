@@ -12,7 +12,7 @@ export default {
   },
   data: function(){
     return {
-      h1_text: "Vue.js KichenSink User Detail Page",
+      h1_text: "Vue3.js KichenSink User Detail Page",
     }
   }
 }

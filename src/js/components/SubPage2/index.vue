@@ -11,7 +11,7 @@
     },
     data: function() {
       return {
-        h1_text: "Vue.js KichenSink Sub Children2 Page",
+        h1_text: "Vue3.js KichenSink Sub Children2 Page",
         message: "this page url is /html/sub/children2( with rooting guard )"
       }
     }
