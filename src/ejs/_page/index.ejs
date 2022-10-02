@@ -1,0 +1,18 @@
+<%
+ header_params = {
+   title: 'vue.js-template',
+   description: 'このページはvue.js制作のテンプレート用ページです'
+ };
+%>
+<%- include('../_layout/header', {params:header_params}) -%>
+<div class="container">
+  <div id="main-content" v-cloak>
+    <router-link tag="button" to="/html">to Main</router-link>
+    <router-link tag="button" to="/html/sub">to Sub</router-link>
+    <router-link tag="button" to="/html/users">to Users</router-link>
+    <button v-if="!is_login" v-on:click="login">login</button>
+    <button v-if="is_login" v-on:click="logout">logout</button>
+    <router-view></router-view>
+  </div>
+</div>
+<%- include('../_layout/footer') -%>

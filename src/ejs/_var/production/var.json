@@ -1,0 +1,7 @@
+{
+    "env": "本番",
+    "envClass": "production",
+    "commonTitle": "タイトルです",
+    "commonCssPath":"../css/common.css",
+    "bundleJsPath":"../js/bundle.js"
+}

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  vue.js-template-apache:
+    image: httpd:2.4.39-alpine
+    container_name: 'vue.js-template-apache'
+    ports:
+      - '8100:80'
+    volumes:
+      - ./dist:/usr/local/apache2/htdocs/
+    tty: true

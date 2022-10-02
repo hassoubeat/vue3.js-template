@@ -1,0 +1,58 @@
+$theme-color: whitesmoke;
+$font-color: darkgray;
+
+// 汎用
+
+body {
+  background-color: $theme-color;
+  color: $font-color;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  padding: 5px;
+  border-radius: 5px;
+  color: gray;
+  background-color: #d6d5d6;
+}
+
+.btn.active {
+  background-color: #cbe5fd;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+// fruit_object
+
+.fruit_object {
+  background-color: white;
+  border: solid 2px;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  color: dimgray;
+}
+
+.fruit_object .ja_name {
+  text-shadow: 1px 2px 3px #808080;
+}
+
+.fruit_object .fruit_object_detail {
+  font-size: 0.8rem;
+  margin: 10px 0px;
+}
+
+input.search-word {
+  padding: 5px;
+  margin: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: none;
+}
