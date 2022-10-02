@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import store from './store';
 
 import Top from "./components/TopPage/index.vue";
-// import SubView from "./sub.vue"
-// import SubChildrenView_1 from "./sub_children1.vue"
-// import SubChildrenView_2 from "./sub_children2.vue"
+import SubView from "./components/SubPage/index.vue";
+import SubChildrenView1 from "./components/SubPage1/index.vue";
+import SubChildrenView2 from "./components/SubPage2/index.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,25 +14,25 @@ const router = createRouter({
       name: 'main',
       component: Top
     },
-    // {
-    //   path: '/html/sub',
-    //   name: 'sub',
-    //   component: SubView,
-    //   children: [
-    //     {
-    //       // /html/sub/children1
-    //       path: 'children1',
-    //       component: SubChildrenView_1
-    //     },
-    //     {
-    //       // /html/sub/children2
-    //       path: 'children2',
-    //       component: SubChildrenView_2,
-    //       // メタフィールド(ログインが必要であることを表示)
-    //       meta: { requiresAuth: true }
-    //     }
-    //   ]
-    // },
+    {
+      path: '/html/sub',
+      name: 'sub',
+      component: SubView,
+      children: [
+        {
+          // /html/sub/children1
+          path: 'children1',
+          component: SubChildrenView1
+        },
+        {
+          // /html/sub/children2
+          path: 'children2',
+          component: SubChildrenView2,
+          // メタフィールド(ログインが必要であることを表示)
+          meta: { requiresAuth: true }
+        }
+      ]
+    },
     // {
     //   path: '/html/users/',
     //   name: 'user_list',

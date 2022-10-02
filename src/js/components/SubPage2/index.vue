@@ -5,10 +5,7 @@
 </template>
 
 <script>
-  import Mixin from './mixin';
-
   export default {
-    mixins: [Mixin],
     created: function () {
       console.log("created " + this.h1_text);
     },

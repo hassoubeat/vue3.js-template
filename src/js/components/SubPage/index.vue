@@ -5,16 +5,11 @@
     <router-link tag="button" to="/html/sub/children1">to Sub Children1</router-link>
     <router-link tag="button" to="/html/sub/children2">to Sub Children2(reqired login)</router-link>
     <router-view></router-view>
-    <br>
-    <button v-on:click="goBack()">back</button>
   </div>
 </template>
 
 <script>
-  import Mixin from './mixin';
-
   export default {
-    mixins: [Mixin],
     created: function () {
       console.log("created " + this.h1_text);
     },
