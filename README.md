@@ -1,5 +1,5 @@
-# vue.js-template
-**EJS, Sass, WebPackをGulpで実行するvue.jsアプリケーション制作テンプレート**  
+# vue3.js-template
+**EJS, Sass, WebPackをGulpで実行するvue.jsアプリケーション制作テンプレート(Vue3バージョン)**  
 
 ## 使い方
 `gulp build`  
