@@ -1,7 +1,13 @@
 <template>
-  <router-link tag="button" to="/html">to Main</router-link>
-  <router-link tag="button" to="/html/sub">to Sub</router-link>
-  <router-link tag="button" to="/html/users">to Users</router-link>
+  <router-link to="/html" v-slot="{navigate}">
+    <button v-on:click="navigate">to MainPage /html</button>
+  </router-link>
+  <router-link to="/html/sub" v-slot="{navigate}">
+    <button v-on:click="navigate">to SubPage /html/sub</button>
+  </router-link>
+  <router-link to="/html/users" v-slot="{navigate}">
+    <button v-on:click="navigate">to UserListPage /html/users</button>
+  </router-link>
   <button v-if="!isLogin" v-on:click="login">login</button>
   <button v-if="isLogin" v-on:click="logout">logout</button>
   <button v-on:click="goBack()">back</button>

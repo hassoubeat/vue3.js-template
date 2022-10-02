@@ -1,9 +1,12 @@
 <template>
   <div>
     <h1>{{h1_text}}</h1>
-    <span class="red">{{ message }}</span><br>
-    <router-link tag="button" to="/html/sub/children1">to Sub Children1</router-link>
-    <router-link tag="button" to="/html/sub/children2">to Sub Children2(reqired login)</router-link>
+    <router-link to="/html/sub/children1" v-slot="{navigate}">
+      <button v-on:click="navigate">to SubChildren1Page /html/sub/children1</button>
+    </router-link>
+    <router-link to="/html/sub/children2" v-slot="{navigate}">
+      <button v-on:click="navigate">to SubChildren2Page /html/sub/children2</button>
+    </router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -16,7 +19,6 @@
     data: function() {
       return {
         h1_text: "Vue.js KichenSink Sub Page",
-        message: "this page is .vue file"
       }
     }
   };
