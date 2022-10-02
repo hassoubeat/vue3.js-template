@@ -20,28 +20,28 @@
         searchWord: "",
         fruitList: [
           {
-            ja_name: "リンゴ",
-            en_name: "apple",
+            jaName: "リンゴ",
+            enName: "apple",
             description: "バラ科リンゴ属の落葉高木樹。またはその果実のこと。"
           },
           {
-            ja_name: "パイナップル",
-            en_name: "pineapple",
+            jaName: "パイナップル",
+            enName: "pineapple",
             description: "パイナップルは、熱帯アメリカ原産のパイナップル科の多年草。"
           },
           {
-            ja_name: "メロン",
-            en_name: "melon",
+            jaName: "メロン",
+            enName: "melon",
             description: "メロンは、果実を食用にするウリ科の一年生草本植物である。また、その果物・果実のこと。"
           },
           {
-            ja_name: "キウイ",
-            en_name: "kiwifruit",
+            jaName: "キウイ",
+            enName: "kiwifruit",
             description: "キウイフルーツは、マタタビ科マタタビ属の雌雄異株の落葉蔓性植物の果実である。"
           },
           {
-            ja_name: "ドラゴンフルーツ",
-            en_name: "dragonfruit",
+            jaName: "ドラゴンフルーツ",
+            enName: "dragonfruit",
             description: "ドラゴンフルーツまたはピタヤは、サボテン科ヒモサボテン属のサンカクサボテン等の果実を指す。"
           }
         ]
