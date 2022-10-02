@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import store from './store';
 import { ROUTING_PATH } from './const';
 
-import Top from "./components/TopPage/index.vue";
-import SubView from "./components/SubPage/index.vue";
-import SubChildrenView1 from "./components/SubPage1/index.vue";
-import SubChildrenView2 from "./components/SubPage2/index.vue";
+import TopPage from "./components/TopPage/index.vue";
+import SubPage from "./components/SubPage/index.vue";
+import SubChildPage1 from "./components/SubChildPage1/index.vue";
+import SubChildPage2 from "./components/SubChildPage2/index.vue";
 import UserListPage from "./components/UserListPage/index.vue";
 import UserDetailPage from "./components/UserDetailPage/index.vue";
 
@@ -15,22 +15,22 @@ const router = createRouter({
     {
       path: ROUTING_PATH.TOP,
       name: 'main',
-      component: Top
+      component: TopPage
     },
     {
       path: ROUTING_PATH.SUB,
       name: 'sub',
-      component: SubView,
+      component: SubPage,
       children: [
         {
           // /html/sub/children1
           path: ROUTING_PATH.SUB1,
-          component: SubChildrenView1
+          component: SubChildPage1
         },
         {
           // /html/sub/children2
           path: ROUTING_PATH.SUB2,
-          component: SubChildrenView2,
+          component: SubChildPage2,
           // メタフィールド(ログインが必要であることを表示)
           meta: { requiresAuth: true }
         }
