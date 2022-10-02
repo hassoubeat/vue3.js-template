@@ -6,6 +6,7 @@ import SubView from "./components/SubPage/index.vue";
 import SubChildrenView1 from "./components/SubPage1/index.vue";
 import SubChildrenView2 from "./components/SubPage2/index.vue";
 import UserListPage from "./components/UserListPage/index.vue";
+import UserDetailPage from "./components/UserDetailPage/index.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -39,12 +40,13 @@ const router = createRouter({
       name: 'user_list',
       component: UserListPage
     },
-    // {
-    //   path: '/html/users/:id',
-    //   name: 'user_detail',
-    //   component: COMPORNENTS.view_user_detail_contents,
-    //   props: true
-    // }
+    {
+      path: '/html/users/:id',
+      name: 'user_detail',
+      component: UserDetailPage,
+      // URLからコンポーネント側に引数を渡すことを明示(idに渡される)
+      props: true
+    }
   ]
 })
 
