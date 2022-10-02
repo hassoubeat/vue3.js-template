@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Top from "./components/topPage/index.vue";
+import Top from "./components/TopPage/index.vue";
 // import SubView from "./sub.vue"
 // import SubChildrenView_1 from "./sub_children1.vue"
 // import SubChildrenView_2 from "./sub_children2.vue"

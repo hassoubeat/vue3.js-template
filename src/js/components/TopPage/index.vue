@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import fruitItem from './fruitItem.vue';
+  import FruitItem from './fruitItem.vue';
 
   export default {
     created: function () {
@@ -79,7 +79,7 @@
     },
     // ローカルコンポーネント登録
     components: {
-      'fruit-item': fruitItem,
+      'fruit-item': FruitItem,
     },
     // 独自ディレクティブ定義
     directives: {
