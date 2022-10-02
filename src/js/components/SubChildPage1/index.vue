@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import { ROUTING_PATH } from "~/const";
+
   export default {
     created () {
       console.log("created " + this.h1Text);
@@ -12,7 +14,7 @@
     data() {
       return {
         h1Text: "Vue3.js KichenSink Sub Children1 Page",
-        message: "this page url is /html/sub/children1"
+        message: `this page url is ${ROUTING_PATH.SUB1}`
       }
     }
   };

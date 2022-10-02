@@ -52,7 +52,12 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js', '.vue' ]
+    extensions: [ '.tsx', '.ts', '.js', '.vue' ],
+    alias: {
+      // 以下のパス指定時に~で絶対パスでの指定が可能
+      // import { ROUTING_PATH } from "~/const";
+      '~': path.resolve(__dirname, 'src/js'),
+    },
   },
   plugins: [
     new webpack.ProvidePlugin({

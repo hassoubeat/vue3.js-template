@@ -8,7 +8,7 @@
  
 <script>
 
-import { ROUTING_PATH } from "../../../const";
+import { ROUTING_PATH } from "~/const";
  
 export default {
   props: ["user"],
