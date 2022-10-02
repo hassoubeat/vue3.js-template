@@ -11,10 +11,10 @@
   import FruitItem from './FruitItem/index.vue';
 
   export default {
-    created: function () {
+    created() {
       console.log("created " + this.h1_text);
     },
-    data: function(){
+    data() {
       return {
         h1_text: "Vue3.js KichenSink Main Page",
         search_word: "",
@@ -55,25 +55,25 @@
           return isSearchResult(fruit);
         })
       },
-      is_reset_btn_active: function() {
+      is_reset_btn_active() {
         return this.search_word != ""
       }
       ,
-      reset_btn_class: function () {
+      reset_btn_class() {
         return {
           active: this.is_reset_btn_active
         }
       }
     },
     methods: {
-      isSearchResult: function (fruit, event) {
+      isSearchResult(fruit) {
         var isView = false;
         if ( fruit.description.indexOf(this.search_word) != -1) {
           isView = true;
         }
         return isView;
       },
-      resetSearchWord: function (event) {
+      resetSearchWord() {
         this.search_word = "";
       }
     },
@@ -84,7 +84,7 @@
     // 独自ディレクティブ定義
     directives: {
       focus: {
-        inserted: function (el) {
+        inserted(el) {
           el.focus()
         }
       }

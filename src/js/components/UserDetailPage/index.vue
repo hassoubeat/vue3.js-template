@@ -7,10 +7,10 @@
  
 export default {
   props: ["id"],
-  created: function () {
+  created() {
     console.log("created " + this.h1_text + "【UserID】" + this.id);
   },
-  data: function(){
+  data(){
     return {
       h1_text: "Vue3.js KichenSink User Detail Page",
     }

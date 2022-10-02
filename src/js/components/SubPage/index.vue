@@ -13,10 +13,10 @@
 
 <script>
   export default {
-    created: function () {
+    created() {
       console.log("created " + this.h1_text);
     },
-    data: function() {
+    data() {
       return {
         h1_text: "Vue3.js KichenSink Sub Page",
       }

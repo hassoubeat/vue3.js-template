@@ -6,10 +6,10 @@
 
 <script>
   export default {
-    created: function () {
+    created() {
       console.log("created " + this.h1_text);
     },
-    data: function() {
+    data() {
       return {
         h1_text: "Vue3.js KichenSink Sub Children2 Page",
         message: "this page url is /html/sub/children2( with rooting guard )"
