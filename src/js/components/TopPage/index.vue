@@ -92,8 +92,12 @@
   };
 </script>
 
-<style scoped>
-  .green {
-    color: green;
+<style lang="scss" scoped>
+  .search-word {
+    padding: 5px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
   }
 </style>

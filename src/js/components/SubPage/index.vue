@@ -28,8 +28,5 @@
   };
 </script>
 
-<style scoped>
-  .red {
-    color: red;
-  }
+<style lang="scss" scoped>
 </style>

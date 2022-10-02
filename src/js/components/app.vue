@@ -57,8 +57,8 @@ export default {
 }
 </script>
  
-<style>
-body, h1{
-  margin: 0;
-}
+<style lang="scss" scoped>
+  body, h1{
+    margin: 0;
+  }
 </style>

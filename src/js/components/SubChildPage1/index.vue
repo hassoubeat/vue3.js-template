@@ -20,7 +20,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .green {
     color: green;
   }
