@@ -45,7 +45,8 @@ module.exports = {
         use: [
           // vue-style-loaderをMiniCssExtractPlugin.loaderに変更
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       }
     ]
