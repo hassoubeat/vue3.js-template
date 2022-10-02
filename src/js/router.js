@@ -1,0 +1,74 @@
+import { createRouter, createWebHistory } from 'vue-router';
+
+import Top from "./components/topPage/index.vue";
+// import SubView from "./sub.vue"
+// import SubChildrenView_1 from "./sub_children1.vue"
+// import SubChildrenView_2 from "./sub_children2.vue"
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/html',
+      name: 'main',
+      component: Top
+    },
+    // {
+    //   path: '/html/sub',
+    //   name: 'sub',
+    //   component: SubView,
+    //   children: [
+    //     {
+    //       // /html/sub/children1
+    //       path: 'children1',
+    //       component: SubChildrenView_1
+    //     },
+    //     {
+    //       // /html/sub/children2
+    //       path: 'children2',
+    //       component: SubChildrenView_2,
+    //       // メタフィールド(ログインが必要であることを表示)
+    //       meta: { requiresAuth: true }
+    //     }
+    //   ]
+    // },
+    // {
+    //   path: '/html/users/',
+    //   name: 'user_list',
+    //   component: COMPORNENTS.view_users_contents
+    // },
+    // {
+    //   path: '/html/users/:id',
+    //   name: 'user_detail',
+    //   component: COMPORNENTS.view_user_detail_contents,
+    //   props: true
+    // }
+  ]
+})
+
+// ルーティング時のbefore処理
+router.beforeEach((to, from, next) => {
+  console.log("before global routing from:" + from.path + " ⇒ to:" + to.path);
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // ログインなしだと/htmlページにリダイレクトで戻す
+    if (store.state.isLogin) {
+      next();
+    } else {
+      console.log("Not Login");
+      next({
+        path: '/html',
+        query: { redirect: to.fullPath }
+      })
+    }
+  } else {
+    next();
+  }
+})
+
+// ルーティング時のafter処理
+router.afterEach((to, from) => {
+  console.log("after global routing");
+})
+
+export default router
+
