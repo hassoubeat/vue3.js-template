@@ -5,6 +5,7 @@ import Top from "./components/TopPage/index.vue";
 import SubView from "./components/SubPage/index.vue";
 import SubChildrenView1 from "./components/SubPage1/index.vue";
 import SubChildrenView2 from "./components/SubPage2/index.vue";
+import UserListPage from "./components/UserListPage/index.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -33,11 +34,11 @@ const router = createRouter({
         }
       ]
     },
-    // {
-    //   path: '/html/users/',
-    //   name: 'user_list',
-    //   component: COMPORNENTS.view_users_contents
-    // },
+    {
+      path: '/html/users/',
+      name: 'user_list',
+      component: UserListPage
+    },
     // {
     //   path: '/html/users/:id',
     //   name: 'user_detail',
