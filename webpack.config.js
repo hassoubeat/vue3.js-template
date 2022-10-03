@@ -69,8 +69,8 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js', '.vue' ],
     alias: {
       // 以下のパス指定時に~で絶対パスでの指定が可能
-      // import { ROUTING_PATH } from "~/const";
-      '~': path.resolve(__dirname, 'src/js'),
+      // import { ROUTING_PATH } from "~/js/js/const";
+      '~': srcPath,
     },
   },
   plugins: [

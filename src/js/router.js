@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import store from '~/store';
-import { ROUTING_PATH } from '~/const';
+import store from '~/js/store';
+import { ROUTING_PATH } from '~/js/const';
 
-import TopPage from "~/components/TopPage/index.vue";
-import SubPage from "~/components/SubPage/index.vue";
-import SubChildPage1 from "~/components/SubChildPage1/index.vue";
-import SubChildPage2 from "~/components/SubChildPage2/index.vue";
-import UserListPage from "~/components/UserListPage/index.vue";
-import UserDetailPage from "~/components/UserDetailPage/index.vue";
+import TopPage from "~/js/components/TopPage/index.vue";
+import SubPage from "~/js/components/SubPage/index.vue";
+import SubChildPage1 from "~/js/components/SubChildPage1/index.vue";
+import SubChildPage2 from "~/js/components/SubChildPage2/index.vue";
+import UserListPage from "~/js/components/UserListPage/index.vue";
+import UserDetailPage from "~/js/components/UserDetailPage/index.vue";
 
 const router = createRouter({
   history: createWebHistory(),

@@ -19,7 +19,7 @@
 import { computed } from "vue";
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router';
-import { ROUTING_PATH } from "~/const";
+import { ROUTING_PATH } from "~/js/const";
  
 export default {
   setup() {

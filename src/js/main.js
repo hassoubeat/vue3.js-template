@@ -1,10 +1,10 @@
 import { createApp } from 'vue';
-import App from "~/components/app.vue";
-import store from "~/store";
-import router from "~/router";
+import App from "~/js/components/app.vue";
+import store from "~/js/store";
+import router from "~/js/router";
 
 // 共通CSS
-import "../sass/common.scss";
+import "~/sass/common.scss";
 
 var app = createApp(App);
 app.use(store);
