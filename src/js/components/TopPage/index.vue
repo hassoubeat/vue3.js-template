@@ -23,7 +23,10 @@
 
   export default {
     setup() {
-      return useEnhancer();
+      const enhanceProps = useEnhancer();
+      console.log("created " + enhanceProps.h1Text.value);
+
+      return enhanceProps;
     },
     // ローカルコンポーネント登録
     components: {
