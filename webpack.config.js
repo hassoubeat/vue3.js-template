@@ -80,7 +80,18 @@ module.exports = {
       jQuery: 'jquery'
     }),
     new VueLoaderPlugin()
-  ]
+  ],
+  // 開発用webpack-dev-serverの設定
+  devServer: {
+    host: "0.0.0.0",
+    port: 8081,
+    static: {
+      directory: distPath,
+    },
+    devMiddleware: {
+      writeToDisk: true
+    }
+  }
 }
 
 
