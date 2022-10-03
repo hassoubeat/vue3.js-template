@@ -6,4 +6,4 @@ import router from "~/router";
 var app = createApp(App);
 app.use(store);
 app.use(router);
-app.mount('#main-content');
+app.mount('#vue-mount-position');
