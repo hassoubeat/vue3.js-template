@@ -10,7 +10,7 @@ export function useEnhancer() {
 
   const isLogin = computed(() => {
     return store.state.isLogin;
-  })
+  });
 
   const login = () => {
     store.commit("changeIsLogin", true);
@@ -26,7 +26,7 @@ export function useEnhancer() {
     window.history.length > 1
       ? router.go(-1)
       : router.push('/')
-  }
+  };
 
   return {
     isLogin,
