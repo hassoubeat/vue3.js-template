@@ -1,7 +1,0 @@
-{
-    "env": "開発",
-    "envClass": "development",
-    "commonTitle": "タイトルです",
-    "commonCssPath":"../css/common.css",
-    "bundleJsPath":"../js/bundle.js"
-}
