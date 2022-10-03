@@ -13,7 +13,8 @@ module.exports = {
   entry: "./src/js/main.js",
   // 出力ファイル
   output: {
-    filename: "js/bundle.js"
+    filename: "js/bundle.js",
+    path: path.resolve(__dirname, 'dist')
   },
    // ローダーの設定
    module: {
