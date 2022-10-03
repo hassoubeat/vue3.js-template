@@ -5,17 +5,14 @@
 </template>
 
 <script>
-  import { ROUTING_PATH } from "~/js/const";
+  import { useEnhancer } from "./enhancer";
 
   export default {
-    created() {
-      console.log("created " + this.h1Text);
-    },
-    data() {
-      return {
-        h1Text: "Vue3.js KichenSink Sub Children2 Page",
-        message: `this page url is ${ROUTING_PATH.SUB_CHILD2}( with rooting guard )`
-      }
+    setup() {
+      const enhanceProps = useEnhancer();
+      console.log("created " + enhanceProps.h1Text.value);
+
+      return enhanceProps;
     }
   };
 </script>

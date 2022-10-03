@@ -89,7 +89,9 @@ module.exports = {
     },
     devMiddleware: {
       writeToDisk: true
-    }
+    },
+    // Vue-Routerで物理的に存在しないパスにアクセスした時でも404にならずよしなに処理してくれる
+    historyApiFallback: true,
   }
 }
 

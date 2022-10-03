@@ -1,23 +1,25 @@
 <template>
     <div class="user_object">
-      <router-link :to="href">
+      <router-link v-bind:to="href">
         {{ user.name }}( {{ user.sex }} )
       </router-link>
     </div>
 </template>
  
 <script>
+  import { useEnhancer } from "./enhancer";
 
-import { ROUTING_PATH } from "~/js/const";
- 
-export default {
-  props: ["user"],
-  computed: {
-    href() {
-      return ROUTING_PATH.USER_DETAIL_OUT_ID + this.user.id;
+  export default {
+    props: {
+      user: {
+        type: Object,
+        required: true
+      }
+    },
+    setup(props) { 
+      return useEnhancer(props);
     }
-  },
-}
+  };
 </script>
  
 <style lang="scss" scoped>

@@ -2,14 +2,22 @@
   <div class="fruit-item">
     <span class="ja-name">{{ fruit.jaName }}</span> (英名：<span class="enName">{{ fruit.enName }}</span>)
     <div class="detail">説明：{{ fruit.description }}</div>
-    <div class="detail">オブジェクト内容：<slot></slot></div>
+    <div class="detail">オブジェクト内容：<slot/></div>
   </div>
 </template>
 
 <script>
   export default {
-    props: ["fruit"],
-  };
+    props: {
+      fruit: {
+        type: Object,
+        required: true,
+      }
+    },
+    setup(props) { 
+      return props;
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
