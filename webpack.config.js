@@ -56,10 +56,9 @@ module.exports = {
       },
       {
         test: /\.(sc|c|sa)ss$/,
+        include: srcPath,
         use: [
-          // vue-style-loaderをMiniCssExtractPlugin.loaderに変更
-          MiniCssExtractPlugin.loader,
-          // "style-loader",
+          'style-loader',
           'css-loader',
           'sass-loader'
         ]
@@ -80,10 +79,7 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new VueLoaderPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/js_output.css'
-    }),
+    new VueLoaderPlugin()
   ]
 }
 
