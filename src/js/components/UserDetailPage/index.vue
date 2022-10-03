@@ -4,18 +4,22 @@
 </template>
  
 <script>
- 
-export default {
-  props: ["id"],
-  created() {
-    console.log("created " + this.h1Text + "【UserID】" + this.id);
-  },
-  data(){
-    return {
-      h1Text: "Vue3.js KichenSink User Detail Page",
+  import { useEnhancer } from "./enhancer";
+
+  export default {
+    props: {
+      id: {
+        type: Number,
+        required: true
+      }
+    },
+    setup(props) { 
+      const enhanceProps = useEnhancer(props);
+      console.log("created " + enhanceProps.h1Text.value);
+
+      return enhanceProps;
     }
-  }
-}
+  };
 </script>
  
 <style lang="scss" scoped>
