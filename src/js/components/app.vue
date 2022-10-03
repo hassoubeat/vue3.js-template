@@ -20,7 +20,6 @@ import { useEnhancer } from "./enhancer";
  
 export default {
   setup() {
-
     return useEnhancer();
   }
 }
