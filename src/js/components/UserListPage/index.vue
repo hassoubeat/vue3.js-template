@@ -1,41 +1,27 @@
 <template>
     <h1>{{h1Text}}</h1>
-    <user-item v-for="(user, index) in users" v-bind:user="user" :key="index"></user-item>
+    <user-item 
+      v-for="(user, index) in users" 
+      v-bind:key="index"
+      v-bind:user="user" 
+    />
 </template>
  
 <script>
 
+import { useEnhancer } from "./enhancer";
 import UserItem from './UserItem/index.vue';
  
 export default {
-  created() {
-    console.log("created " + this.h1Text);
-  },
-  data(){
-    return {
-      h1Text: "Vue3.js KichenSink User List Page",
-      users: [
-        {
-          id: 1,
-          name: "ジョン",
-          sex: "male"
-        },
-        {
-          id: 2,
-          name: "ケイト",
-          sex: "female"
-        },
-        {
-          id: 3,
-          name: "ハリー",
-          sex: "male"
-        },
-      ]
-    }
+  setup() {
+    const enhanceProps = useEnhancer();
+    console.log("created " + enhanceProps.h1Text.value);
+
+    return enhanceProps;
   },
   components: {
-    'user-item': UserItem,
-  },
+    "user-item": UserItem
+  }
 }
 </script>
  
